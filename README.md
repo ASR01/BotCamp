@@ -57,3 +57,12 @@ Django is used to have the Frontend.
    
    
    <img src="./readme_img/Locations.png" alt="Locations" style="zoom:50%;" />
+
+## How to use this App?
+
+1. Download the app and the the weights.
+2. Load the required modules requirements.txt in the python environment.
+3. Activate the environment.
+4. `python manage.py runserver`
+5. https://localhost:8000
+
