@@ -50,8 +50,10 @@ Django is used to have the Frontend.
 
    ![logged_in](./readme_img/logged_in.png)
 
-2. The idea is that the user should login and therefore he can see the chat history and information related to him like his courses.
+2. The idea is that the user should login and therefore he can see the chat history and information related to him like his courses or the campus locations.
+
+   <img src="./readme_img\courses.png" alt="courses" style="zoom: 50%;" />
 
    
-
    
+   <img src="./readme_img/Locations.png" alt="Locations" style="zoom:50%;" />
