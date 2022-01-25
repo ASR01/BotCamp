@@ -44,11 +44,11 @@ Django is used to have the Frontend.
 
 1. The user can get information with or without login, when the user is logged the chat history is visible. 
 
-   ![login_1](./readme_img/login_1.png)
+   ![login_1](./readme_img/l_1.png)
 
    
 
-   ![logged_in](./readme_img/logged_in.png)
+   ![logged_in](./readme_img/l_2.png)
 
 2. The idea is that the user should login and therefore he can see the chat history and information related to him like his courses or the campus locations.
 
