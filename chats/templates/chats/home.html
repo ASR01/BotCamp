@@ -1,0 +1,21 @@
+{% extends 'main.html'%} 
+
+{% block content%}
+
+<style>
+    .home-container{
+        display:grid;
+
+    }
+</style>
+
+<div class = "home-container">
+
+    <div>
+        {% include 'chats/chat.html' %}
+    </div>
+
+</div>
+
+
+{%endblock content%}

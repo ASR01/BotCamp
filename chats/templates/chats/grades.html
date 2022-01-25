@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<h1>Your courses {{user.name}}</h1>
+
+<div class="comment-wrapper">
+    <h3>Courses</h3>
+    <h2>{{user.name}}</h2>
+        {% for uc in user.usercourse_set.all %}
+        <a href="{% url 'course' uc.course.id %}">
+          
+        {{uc.course}} </a> {{uc.teacher}} <br>
+        <hr/>
+        
+        {%endfor%}
+
+      {% for course in courses%}
+      <div>
+        <a href="{% url 'course' course.id %}">
+        {{course.body}} </a> {{course.created|timesince}} ago
+      </div>
+      <p>{{course.teacher}}</p>
+      <hr />
+      {% endfor %}
+</div>
+
+
+{% endblock content %}

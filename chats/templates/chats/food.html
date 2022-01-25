@@ -1,0 +1,23 @@
+{% extends 'main.html'%} 
+
+{% block content%}
+
+<style>
+    .food-container{
+        display:grid;
+        grid-template-columns: 2fr 2fr ;
+
+    }
+</style>
+
+<div class="food-container">
+
+   <div>
+        <a href="{% url 'food' %}"">Food</a><br>
+
+
+    </div>
+
+</div>
+
+{%endblock content%}

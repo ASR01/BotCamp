@@ -1,0 +1,48 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_size": 22765,
+  "description": "",
+  "download_checksums": {
+    "/content/drive/My Drive/Strive/GitHub/BotCamp/hf_training/enhanced_questions_int.csv": {
+      "num_bytes": 18144,
+      "checksum": "ca52961dfc572a06193bb87e45bad84f1160fbb9c95f95c744737c9004e613d5"
+    }
+  },
+  "download_size": 18144,
+  "features": {
+    "labels": {
+      "dtype": "int64",
+      "id": null,
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "id": null,
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "post_processed": null,
+  "post_processing_size": null,
+  "size_in_bytes": 40909,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 22765,
+      "num_examples": 583,
+      "dataset_name": "csv"
+    }
+  },
+  "supervised_keys": null,
+  "task_templates": null,
+  "version": {
+    "version_str": "0.0.0",
+    "description": null,
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

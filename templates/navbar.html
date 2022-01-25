@@ -1,0 +1,72 @@
+<header class="mb-auto">
+ 
+<div class="row justify-content-between">
+  
+    <nav class="navbar navbar-expand-lg ml-auto navbar-light bg-light ">
+<!-- 
+        <a class="navbar-brand" href="#">
+  
+            <img src=
+            width="=120" height="80" alt="">
+        </a> -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="{% url 'home' %}">BotCamp</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Our....
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item animated zoomIn" aria-current="page" href="{% url 'food' %}">...food</a></li>
+                  <li><a class="dropdown-item" href="{% url 'sports' %}">...sports</a></li>
+                  <li><a class="dropdown-item" href="{% url 'locations' %}"> ...directions</a></li>
+                  <li><a class="dropdown-item" href="{% url 'courses' %}"> ...courses</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Your....
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% if request.user.is_authenticated %}
+                        <li><a class="dropdown-item" aria-current="page" href="{% url 'my_courses' request.user.id %}">...courses</a></li>
+                        <li><a class="dropdown-item" aria-current="page" href="{% url 'my_grades'  %}">...exams</a></li>
+                        <li><a class="dropdown-item" aria-current="page" href="{% url 'my_exams'  %}">...grades</a></li>
+
+                        
+                    {% else%}
+
+                    <li><a class="dropdown-item disabled" aria-current="page" href="#">...courses</a></li>
+                    <li><a class="dropdown-item disabled" aria-current="page" href="#">...exams</a></li>
+                    <li><a class="dropdown-item disabled" aria-current="page" href="#">...grades</a></li>
+              {% endif%}
+
+                </ul>
+              </li>
+
+
+            {% if request.user.is_authenticated %}
+            <li class="nav-link">
+                <a href="{% url 'logout' %}">
+                    Logout                 </a>
+            </li>
+
+            {% else %}
+            <li class="nav-item"></li>
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            {% endif %}
+
+
+        </ul>
+        </div>
+      </nav>
+    
+
+
+      
+  </div>
+</header>

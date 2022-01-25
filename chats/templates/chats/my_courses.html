@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<h1>Your courses {{user}}</h1>
+
+<div class="comment-wrapper">
+        {% for uc in user.usercourse_set.all %}
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{uc.course.img_link}}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{uc.course.body}}</h5>
+                <p class="card-text"> <a href="{% url 'course' uc.course.id %}">{{uc.course.brief_desc}}</a></p>
+                <p class="card-text"> {{uc.course.teacher}}</p>
+                <p class="card-text"><small class="text-muted">Last updated {{uc.course.updated|timesince}} ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>        
+        {% endfor %} 
+
+</div>
+
+
+
+
+{% endblock content %}

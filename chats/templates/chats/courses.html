@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+  <h1>Our courses </h1>
+
+  {% for course in courses%}
+  
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{course.img_link}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body text-white">
+          <h5 class="card-titletext-white">{{course.body}}</h5>
+          <p class="card-text text-white"> <a href="{% url 'course' course.id %}">{{course.brief_desc}}</a></p>
+          <p class="card-text text-white"><small class="text-muted">Last updated {{course.updated|timesince}} ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}  
+  
+
+  
+
+<!-- 
+  <div class="accordion accordion-flush" id="accordionExample">
+    {% for course in courses%}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="header{{course.id}}">
+
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{course.id}}" aria-expanded="true" aria-controls="{{course.id}}">
+        {{course.body}}
+        </button>
+      </h2>
+      <div id="{{course.body}}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    {% endfor %}  
+
+  </div> -->
+
+
+
+{% endblock content %}
